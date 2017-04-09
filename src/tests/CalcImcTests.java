@@ -1765,7 +1765,7 @@ public class CalcImcTests {
 
 	@Test
 	public void testeValorInvalido() {
-		Assert.assertEquals("Valor Inv·lido", cal.calcularIMC(-1, 0, "masculino", 0));
+		Assert.assertEquals("Valor Inv√°lido", cal.calcularIMC(-1, 0, "masculino", 0));
 
 	}
 

@@ -12,7 +12,7 @@ public class CalculadoraIMC {
 		TipoIMC tipoIMC;
 
 		if (idade <= 0 || peso <= 0 || altura <= 0) {
-			return "Valor Inválido";
+			return "Valor InvÃ¡lido";
 		} else if (idade < 20) {
 			if (sexo.equals("masculino")) {
 				tipoIMC = TipoIMC.CRIANCA_MASCULINO;

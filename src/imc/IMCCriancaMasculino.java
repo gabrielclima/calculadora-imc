@@ -7,7 +7,7 @@ public class IMCCriancaMasculino implements IMCStrategy {
 
 	@Override
 	public String calcularIMC(double imc, String sexo, int idade) {
-		LimiteIMC.LimiteIMCBuilder limiteBuilder = null;
+		LimiteIMC.LimiteIMCBuilder limiteBuilder;
 		
 		if(idade <= 2){
 			limiteBuilder = new LimiteIMC.LimiteIMCBuilder()
@@ -70,8 +70,7 @@ public class IMCCriancaMasculino implements IMCStrategy {
 					.sobrePeso(32)
 					.obesidade(37);	
 		}
-		
-		
+				
 		LimiteIMC limite = limiteBuilder.estabelecerLimiteIMCCrianca();
 		
 
