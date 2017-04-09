@@ -10,35 +10,35 @@ import imc.IMCStrategy;
 public enum TipoIMC {
 	CRIANCA_MASCULINO {
 		@Override
-		public IMCStrategy obterIMC() {
+		public IMCStrategy obterStrategyIMC() {
 			return new IMCCriancaMasculino();
 		}
 	},
 	CRIANCA_FEMININO {
 		@Override
-		public IMCStrategy obterIMC() {
+		public IMCStrategy obterStrategyIMC() {
 			return new IMCCriancaFeminino();
 		}
 	},
 	ADULTO {
 		@Override
-		public IMCStrategy obterIMC() {
+		public IMCStrategy obterStrategyIMC() {
 			return new IMCAdulto();
 		}
 	},
 	IDOSO_MASCULINO {
 		@Override
-		public IMCStrategy obterIMC() {
+		public IMCStrategy obterStrategyIMC() {
 			return new IMCIdosoMasculino();
 		}
 	},
 	IDOSO_FEMININO {
 		@Override
-		public IMCStrategy obterIMC() {
+		public IMCStrategy obterStrategyIMC() {
 			return new IMCIdosoFeminino();
 		}
 	};
 	
-	public abstract IMCStrategy obterIMC();
+	public abstract IMCStrategy obterStrategyIMC();
 
 }

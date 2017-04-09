@@ -15,21 +15,21 @@ public class CalculadoraIMC {
 			return "Valor Inválido";
 		} else if (idade < 20) {
 			if (sexo.equals("masculino")) {
-				tipoIMC = TipoIMC.values()[0];
+				tipoIMC = TipoIMC.CRIANCA_MASCULINO;
 			} else {
-				tipoIMC = TipoIMC.values()[1];
+				tipoIMC = TipoIMC.CRIANCA_FEMININO;
 			}
 		} else if (idade <= 65) {
-			tipoIMC = TipoIMC.values()[2];
+			tipoIMC = TipoIMC.ADULTO;
 		} else {
 			if (sexo.equals("masculino")) {
-				tipoIMC = TipoIMC.values()[3];
+				tipoIMC = TipoIMC.IDOSO_MASCULINO;
 			} else {
-				tipoIMC = TipoIMC.values()[4];
+				tipoIMC = TipoIMC.IDOSO_FEMININO;
 			}
 		}
 
-		IMCStrategy imcStrategy = tipoIMC.obterIMC();
+		IMCStrategy imcStrategy = tipoIMC.obterStrategyIMC();
 
 		return imcStrategy.calcularIMC(imc, sexo, idade);
 	}
