@@ -1,3 +1,5 @@
+//Padrão de projeto Strategy
+
 package imc;
 
 public interface IMCStrategy {

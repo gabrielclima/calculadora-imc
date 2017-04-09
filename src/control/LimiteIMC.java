@@ -1,5 +1,7 @@
 package control;
 
+//Padrão de projeto Builder
+
 public class LimiteIMC {
 	private double baixoPesoMuitoGrave;
 	private double baixoPesoGrave;
