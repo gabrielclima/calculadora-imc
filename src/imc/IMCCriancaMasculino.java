@@ -12,63 +12,53 @@ public class IMCCriancaMasculino implements IMCStrategy {
 		if(idade <= 2){
 			limiteBuilder = new LimiteIMC.LimiteIMCBuilder()
 					.baixoPeso(14.99)
-					.pesoNormal(17.99)
-					.sobrePeso(19.05)
-					.obesidade(19.24);
+					.pesoNormal(18)
+					.sobrePeso(19.05);
 		}else if(idade <= 4){
 			limiteBuilder = new LimiteIMC.LimiteIMCBuilder()
-					.baixoPeso(10)
-					.pesoNormal(27)
-					.sobrePeso(32)
-					.obesidade(37);
+					.baixoPeso(14.59)
+					.pesoNormal(16.99)
+					.sobrePeso(17.98);
 		}else if(idade <= 6){
 			limiteBuilder = new LimiteIMC.LimiteIMCBuilder()
-					.baixoPeso(10)
-					.pesoNormal(27)
-					.sobrePeso(32)
-					.obesidade(37);		
+					.baixoPeso(13.99)
+					.pesoNormal(16.99)
+					.sobrePeso(18.10);		
 		}else if(idade <= 8){
 			limiteBuilder = new LimiteIMC.LimiteIMCBuilder()
-					.baixoPeso(10)
-					.pesoNormal(27)
-					.sobrePeso(32)
-					.obesidade(37);	
+					.baixoPeso(14.10)
+					.pesoNormal(18)
+					.sobrePeso(19.99);	
 		}else if(idade <= 10){
 			limiteBuilder = new LimiteIMC.LimiteIMCBuilder()
-					.baixoPeso(10)
-					.pesoNormal(27)
-					.sobrePeso(32)
-					.obesidade(37);	
+					.baixoPeso(14.39)
+					.pesoNormal(19.10)
+					.sobrePeso(21.99);	
 		}else if(idade <= 12){
 			limiteBuilder = new LimiteIMC.LimiteIMCBuilder()
-					.baixoPeso(10)
-					.pesoNormal(27)
-					.sobrePeso(32)
-					.obesidade(37);	
+					.baixoPeso(15.10)
+					.pesoNormal(21.19)
+					.sobrePeso(24.99);	
 		}else if(idade <= 14){
 			limiteBuilder = new LimiteIMC.LimiteIMCBuilder()
-					.baixoPeso(10)
-					.pesoNormal(27)
-					.sobrePeso(32)
-					.obesidade(37);	
+					.baixoPeso(16.38)
+					.pesoNormal(22.40)
+					.sobrePeso(26);	
 		}else if(idade <= 16){
 			limiteBuilder = new LimiteIMC.LimiteIMCBuilder()
-					.baixoPeso(10)
-					.pesoNormal(27)
-					.sobrePeso(32)
-					.obesidade(37);	
+					.baixoPeso(17.89)
+					.pesoNormal(24.08)
+					.sobrePeso(26.67);	
 		}else if(idade <= 18){
 			limiteBuilder = new LimiteIMC.LimiteIMCBuilder()
-					.baixoPeso(10)
-					.pesoNormal(27)
-					.sobrePeso(32)
-					.obesidade(37);	
+					.baixoPeso(18.90)
+					.pesoNormal(25.50)
+					.sobrePeso(28.90);	
 		}else{
 			limiteBuilder = new LimiteIMC.LimiteIMCBuilder()
-					.baixoPeso(10)
+					.baixoPeso(19.90)
 					.pesoNormal(27)
-					.sobrePeso(32)
-					.obesidade(37);	
+					.sobrePeso(30.16);	
 		}
 				
 		LimiteIMC limite = limiteBuilder.estabelecerLimiteIMCCrianca();

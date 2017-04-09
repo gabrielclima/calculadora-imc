@@ -107,7 +107,7 @@ public class LimiteIMC {
 		}
 		
 		public LimiteIMC estabelecerLimiteIMCCrianca(){
-			return new LimiteIMC(baixoPeso, pesoNormal, sobrePeso, obesidade);
+			return new LimiteIMC(baixoPeso, pesoNormal, sobrePeso, Double.MAX_VALUE);
 		}
 		
 		public LimiteIMC estabelecerLimiteIMCAdulto(){
