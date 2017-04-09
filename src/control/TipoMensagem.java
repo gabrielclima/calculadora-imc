@@ -16,13 +16,13 @@ public enum TipoMensagem {
 	BAIXO_PESO {
 		@Override
 		public String retornarMensagem() {
-			return "Baixo peso";
+			return "Baixo Peso";
 		}
 	},
 	PESO_NORMAL {
 		@Override
 		public String retornarMensagem() {
-			return "Peso normal";
+			return "Peso Normal";
 		}
 	},
 	SOBREPESO {

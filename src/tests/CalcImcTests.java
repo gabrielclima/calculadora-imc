@@ -61,7 +61,7 @@ public class CalcImcTests {
 
 	@Test
 	public void testeAdultoBaixoPesoMinimoIdadeLimiteMinimo() {
-		Assert.assertEquals("Baixo peso", cal.calcularIMC(1.58, 42.44, "feminino", 20));
+		Assert.assertEquals("Baixo Peso", cal.calcularIMC(1.58, 42.44, "feminino", 20));
 
 	}
 
@@ -71,7 +71,7 @@ public class CalcImcTests {
 
 	@Test
 	public void testeAdultoBaixoPesoMaximoLimiteMaximo() {
-		Assert.assertEquals("Baixo peso", cal.calcularIMC(1.58, 46, "masculino", 65));
+		Assert.assertEquals("Baixo Peso", cal.calcularIMC(1.58, 46, "masculino", 65));
 
 	}
 
@@ -81,7 +81,7 @@ public class CalcImcTests {
 
 	@Test
 	public void testeAdultoPesoNormalLimiteMinimo() {
-		Assert.assertEquals("Peso normal", cal.calcularIMC(2.03, 76.6, "masculino", 20));
+		Assert.assertEquals("Peso Normal", cal.calcularIMC(2.03, 76.6, "masculino", 20));
 
 	}
 
@@ -91,7 +91,7 @@ public class CalcImcTests {
 
 	@Test
 	public void testeAdultoPesoNormalLimiteMaximo() {
-		Assert.assertEquals("Peso normal", cal.calcularIMC(2.10, 108, "feminino", 65));
+		Assert.assertEquals("Peso Normal", cal.calcularIMC(2.10, 108, "feminino", 65));
 
 	}
 
@@ -173,7 +173,7 @@ public class CalcImcTests {
 	// Teste com Valor imc Limite Minimo para Baixo Peso em Idosos sexo Feminino
 	@Test
 	public void testeIdosoFemininoBaixoPesoLimiteMaximo() {
-		Assert.assertEquals("Baixo peso", cal.calcularIMC(1.79, 68, "feminino", 66));
+		Assert.assertEquals("Baixo Peso", cal.calcularIMC(1.79, 68, "feminino", 66));
 
 	}
 
@@ -181,7 +181,7 @@ public class CalcImcTests {
 	// Feminino
 	@Test
 	public void testeIdosoFemininoPesoNormalLimiteMinimo() {
-		Assert.assertEquals("Peso normal", cal.calcularIMC(1.55, 53, "feminino", 66));
+		Assert.assertEquals("Peso Normal", cal.calcularIMC(1.55, 53, "feminino", 66));
 
 	}
 
@@ -189,7 +189,7 @@ public class CalcImcTests {
 	// Feminino
 	@Test
 	public void testeIdosoFemininoPesoNormalLimiteMaximo() {
-		Assert.assertEquals("Peso normal", cal.calcularIMC(1.56, 65.5, "feminino", 66));
+		Assert.assertEquals("Peso Normal", cal.calcularIMC(1.56, 65.5, "feminino", 66));
 
 	}
 
@@ -251,21 +251,21 @@ public class CalcImcTests {
 	// Teste com imc Valor Maximo para Baixo Peso em Idosos sexo Masculino
 	@Test
 	public void testeIdosoMasculinoBaixoPeso() {
-		Assert.assertEquals("Baixo peso", cal.calcularIMC(1.64, 59, "masculino", 66));
+		Assert.assertEquals("Baixo Peso", cal.calcularIMC(1.64, 59, "masculino", 66));
 
 	}
 
 	// Teste com imc Valor Minimo para Peso Normal em Idosos sexo Masculino
 	@Test
 	public void testeIdosoMasculinoPesoNormalLimiteMinimo() {
-		Assert.assertEquals("Peso normal", cal.calcularIMC(1.46, 47, "masculino", 66));
+		Assert.assertEquals("Peso Normal", cal.calcularIMC(1.46, 47, "masculino", 66));
 
 	}
 
 	// Teste com imc Valor Maximo para Peso Normal em Idosos sexo Masculino
 	@Test
 	public void testeIdosoMasculinoPesoNormalLimiteMaximo() {
-		Assert.assertEquals("Peso normal", cal.calcularIMC(1.46, 57.5, "masculino", 66));
+		Assert.assertEquals("Peso Normal", cal.calcularIMC(1.46, 57.5, "masculino", 66));
 
 	}
 
