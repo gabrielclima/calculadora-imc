@@ -1,32 +1,25 @@
-<project name="Projecto de exemplo para build no jenkins">
+<project name="junit-ant-example" default="test" basedir=".">
 	
-	<path id="tests.classpath" path=".">
-		<fileset dir="lib/">
-			<include name="*.jar" />
-		</fileset>
-		<pathelement path="target/classes/" />
-	</path>
-	
-	<target name="compile">
-		<mkdir dir="target/classes/"/>
-		<mkdir dir="target/classes-test/"/>
-		<!-- <javac destdir="target/classes/" srcdir="src/control/" debug="true" encoding="UTF-8" /> -->
-		<javac destdir="target/classes-test/" srcdir="src/tests/" classpathref="tests.classpath" debug="true" encoding="UTF-8" />
-	</target>
-	
-	<target name="test" depends="compile">
-		<junit fork="yes" forkmode="once"  printsummary="true" showoutput="true" failureproperty="failed-test" haltonfailure="true" >
-			<formatter type="plain" usefile="false" />
-			<classpath location="target/classes-test/" />
-			<classpath refid="tests.classpath" />
-			<batchtest fork="yes" todir="${artifacts.dir}/reports">
-				<fileset dir="target/classes-test/" >
-					<include name="**/*Tests.class" />
-				</fileset>
-			</batchtest>
+	<property name="src" location="src" />
+	<property name="tests" location="src/tests" />
+	<property name="build" location="build" />
+	<property name="dist" location="dist" />
+
+	<description>
+    simple example build file
+  </description>
+	<target name="test">
+		<junit printsummary="yes" haltonfailure="yes">
+			<classpath>
+				<pathelement location="${project.class.path}" />
+				<pathelement location="${tests}" />
+				<pathelement path="${java.class.path}" />
+				<pathelement location="lib/junit-4.10.jar"/>
+			</classpath>
+			<test name="com.areyes1.jgc.junit.assertequals.JUnitAssertEqualsExample" haltonfailure="no" outfile="result">
+				<formatter type="plain" />
+				<formatter type="xml" />
+			</test>
 		</junit>
-	</target>
-	<target name="jar" depends="test">
-		<jar destfile="target/jenkins-exemplo.jar" basedir="target/classes/" />
 	</target>
 </project>
