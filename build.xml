@@ -19,6 +19,7 @@
 			<formatter type="brief" usefile="false"/>
 		  </junit>
 	</target>
-	<target name="jar">
+	<target name="jar" depends="test">
+			<jar destfile="target/jenkins-exemplo.jar" basedir="target/classes/" />
 		</target>
 </project>
