@@ -4,22 +4,21 @@
 	<property name="tests" location="src/tests" />
 	<property name="build" location="build" />
 	<property name="dist" location="dist" />
-
 	<description>
     simple example build file
   </description>
 	<target name="test">
-		<junit printsummary="yes" haltonfailure="yes">
-			<classpath>
-				<pathelement location="${project.class.path}" />
-				<pathelement location="${tests}" />
-				<pathelement path="${java.class.path}" />
-				<pathelement location="lib/junit-4.10.jar"/>
-			</classpath>
-			<test name="com.areyes1.jgc.junit.assertequals.JUnitAssertEqualsExample" haltonfailure="no" outfile="result">
-				<formatter type="plain" />
-				<formatter type="xml" />
-			</test>
-		</junit>
+		<junit>
+		    <classpath>
+		      <pathelement location="bin" />    
+		      <pathelement location="lib/junit-4.10.jar"/>
+		    </classpath>    
+		    <batchtest>
+		    	<fileset dir="${tests}" includes="**/Tests*.java" />
+		    </batchtest>
+			<formatter type="brief" usefile="false"/>
+		  </junit>
 	</target>
+	<target name="jar">
+		</target>
 </project>
